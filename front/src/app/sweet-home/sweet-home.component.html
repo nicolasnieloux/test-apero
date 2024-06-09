@@ -1,1 +1,4 @@
-<p>{{ messageApero || 'Pas de message recu' }}</p>
+<h1 *ngIf="!error" [attr.data-heading]="apero" class="center-text">
+  {{ apero }}
+</h1>
+<h2 *ngIf="error" class="error center-text">{{ error }}</h2>

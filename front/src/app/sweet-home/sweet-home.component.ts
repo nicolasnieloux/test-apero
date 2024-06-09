@@ -1,20 +1,31 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {AperoRestService} from "../../services/apero-rest.service";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-sweet-home',
   standalone: true,
-  imports: [],
+  imports: [
+    NgIf
+  ],
   templateUrl: './sweet-home.component.html',
   styleUrl: './sweet-home.component.scss'
 })
 export class SweetHomeComponent {
-  protected messageApero?: string;
+
+  protected apero = '...';
+  error?: string;
 
   constructor(
-    private aperoRestService: AperoRestService,
+    aperoRestService: AperoRestService,
   ) {
-    aperoRestService.messageApero().subscribe(messageApero => this.messageApero = messageApero);
+    aperoRestService.messageApero().subscribe({
+      next: messageApero => {
+        this.apero = messageApero
+        this.error = undefined;
+      },
+      error: () => this.error = 'Service indisponible :/',
+    });
   }
 
 }
