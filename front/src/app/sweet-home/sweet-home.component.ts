@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {AperoRestService} from "../../services/apero-rest.service";
 
 @Component({
   selector: 'app-sweet-home',
@@ -8,5 +9,12 @@ import { Component } from '@angular/core';
   styleUrl: './sweet-home.component.scss'
 })
 export class SweetHomeComponent {
+  protected messageApero?: string;
+
+  constructor(
+    private aperoRestService: AperoRestService,
+  ) {
+    aperoRestService.messageApero().subscribe(messageApero => this.messageApero = messageApero);
+  }
 
 }
