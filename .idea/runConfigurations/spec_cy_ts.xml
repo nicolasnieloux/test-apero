@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="spec.cy.ts" type="JavaScriptTestRunnerCypress" nameIsGenerated="true">
+    <config value="$PROJECT_DIR$/front/cypress.config.ts" />
+    <node-interpreter value="project" />
+    <cypress-package value="$PROJECT_DIR$/front/node_modules/cypress" />
+    <working-dir value="$PROJECT_DIR$/front" />
+    <cypress-options value="-q" />
+    <envs />
+    <scope-kind value="TEST_FILE" />
+    <test-file value="$PROJECT_DIR$/front" />
+    <method v="2" />
+  </configuration>
+</component>

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root',
@@ -10,6 +10,6 @@ export class AperoRestService {
     private httpClient: HttpClient,
   ) { }
 
-  messageApero = () => this.httpClient.get("/est-ce-que-c-est-l-heure-de-l-apero", {responseType: 'text'});
+  messageApero = () => this.httpClient.get("/api/est-ce-que-c-est-l-heure-de-l-apero", {responseType: 'text'});
 
 }

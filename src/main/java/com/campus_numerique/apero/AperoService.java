@@ -22,7 +22,7 @@ public class AperoService {
             return "Pastis ! :D";
 
         if (now.getHour() >= 17 || now.getHour() < 2)
-            return "Soirée ! :P";
+            return "Vodka orange ! ⛱️";
 
         return "C'est pas l'heure de l'apéro :'(";
     }

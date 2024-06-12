@@ -43,6 +43,7 @@
 }</component>
   <component name="RunManager" selected="Cypress.spec.cy.ts">
     <list>
+      <item itemvalue="Cypress.spec.cy.ts" />
       <item itemvalue="npm.start" />
       <item itemvalue="Spring Boot.AperoApplication" />
     </list>

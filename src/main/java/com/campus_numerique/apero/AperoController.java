@@ -12,7 +12,7 @@ public class AperoController {
         this.aperoService = aperoService;
     }
 
-    @GetMapping("/est-ce-que-c-est-l-heure-de-l-apero")
+    @GetMapping("/api/est-ce-que-c-est-l-heure-de-l-apero")
     public String estCeQueCestLheureDeLapero() {
         return aperoService.estCeQueCestLheureDeLapero();
     }
